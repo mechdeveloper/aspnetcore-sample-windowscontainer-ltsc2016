@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+  webapp:
+    image: aspnetcore-sampleapp:v0.0.1
+    ports:
+      - mode: host
+        target: 80
+        published: 8080
+    deploy:
+      mode: global
+      endpoint_mode: dnsrr
+    configs:
+      - source: appsettings.json
+        target: /app/application.yaml
+    networks:
+      - web_net
+
+configs:
+  appsettings.json:
+    file: ./appsettings.json
+networks:
+  web_net:
