@@ -4,7 +4,7 @@
 
 ```PowerShell
 # Build
-docker build --build-arg HTTP_PROXY=$env:HTTP_PROXY `
+docker build `
   -t ashishbagheldocker/windows/baseimages/dotnet:sdk-5.0-servercore-ltsc2016 .
 
 # Run / Test
@@ -15,7 +15,7 @@ docker run ashishbagheldocker/windows/baseimages/dotnet:sdk-5.0-servercore-ltsc2
 
 ```PowerShell
 # Build
-docker build --build-arg HTTP_PROXY=$env:HTTP_PROXY `
+docker build `
  -t ashishbagheldocker/windows/baseimages/aspnetcore:runtime-5.0.0-servercore-ltsc2016
 
 # Run / Test
